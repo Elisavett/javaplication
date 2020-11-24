@@ -1,0 +1,31 @@
+<html><!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<!-- Назначаем идентификатор контейнеру, который будет менять цвет фона-->
+<body id="сontainer">
+<h1 style="text-align:center">Java</h1>
+<!-- Обозначаем JS функцию, которая будет выполняться при щелчке на кнопку.
+В функцию передаем параметр - соответствующий кнопке цвет-->
+<button onclick="changeBackColor('red')" id="RedButton"
+        Style="margin: 5%; float:left; font-size:50px; width: 40%; height: 100px;">красный</button>
+<button onclick="changeBackColor('blue')"  id="BlueButton"
+        Style="margin: 5%; float:left; font-size:50px; width: 40%; height: 100px;">синий</button>
+<button onclick="changeBackColor('yellow')" id="YellowButton"
+        Style="margin: 5%; float:left; font-size:50px; width: 40%; height: 100px;">желтый</button>
+<button onclick="changeBackColor('green')" id="GreenButton"
+        Style="margin: 5%; float:left; font-size:50px; width: 40%; height: 100px;">зеленый</button>
+</body>
+
+</html>
+<script>
+    //Функция - обработчик нажатия с параметром цвет
+    function changeBackColor(color) {
+        //Находим контейнер по идентификатору для смены цвета его фона
+        document.getElementById("сontainer").style.backgroundColor = color;
+    }
+</script>
+
